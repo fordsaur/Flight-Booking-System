@@ -1,0 +1,39 @@
+<table class="table table-striped table-dark m-3">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">gate</th>
+      <th scope="col">Price</th>
+      <th scope="col">origin</th>
+      <th scope="col">airline</th>
+      <th scope="col">aircraft</th>
+      <th scope="col">duration</th>
+      <th scope="col">arrivalTime</th>
+      <th scope="col">destination</th>
+      <th scope="col">flightNumber</th>
+      <th scope="col">DepartureTime</th>
+      <th scope="col">seatAvaiable</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (data of (bookingdatasList | filterByDate : searchArrivalDate :
+    searchDepartureDate); track i ; let i =$index) { @defer() {
+    <tr>
+      <th scope="row">{{ data?.id }}</th>
+      <td>{{ data?.gate }}</td>
+      <td>{{ data?.price | currency : "INR" }}</td>
+      <td>{{ data?.origin }}</td>
+      <td>{{ data?.airline }}</td>
+      <td>{{ data?.aircraft }}</td>
+      <td>{{ data?.duration }}</td>
+      <td>{{ data?.arrivalTime }}</td>
+      <td>{{ data?.destination }}</td>
+      <td>{{ data?.flightNumber }}</td>
+      <td>{{ data?.departureTime | date : "MM-dd-yyyy" }}</td>
+      <td>{{ data?.seatsAvailable }}</td>
+    </tr>
+    } }@empty {
+    <div class="no-data">No Record Found</div>
+    }
+  </tbody>
+</table>

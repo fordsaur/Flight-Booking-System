@@ -1,0 +1,59 @@
+.heading-system {
+    font-size: 40px;
+    text-align: center;
+    margin: 30px;
+}
+
+.loader {
+    width: 100%;
+    text-align: center;
+    height: 200px;
+    background-color: red;
+    padding: 10px;
+    margin: 40px;
+}
+
+.err {
+    width: 350px;
+    text-align: center;
+    height: 200px;
+    background-color: rgba(45, 236, 23, 0.61);
+    padding: 10px;
+    margin: 40px;
+}
+
+.no-data {
+    text-align: center;
+    font-size: 40px;
+    color: blue;
+    background-color: burlywood;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+  label{
+    font-weight: 500;
+  }

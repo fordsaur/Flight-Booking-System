@@ -1,0 +1,49 @@
+<div class="container">
+  <h1 class="heading-system">Flight Booking System</h1>
+  <div class="row">
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by Source / Flight / Class"
+        (keyup)="search($event)"
+      />
+    </div>
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by Destination "
+        (keyup)="searchByDestination($event)"
+      />
+    </div>
+    <label for="exampleInputEmail1" class="form-label">Arrival date</label>
+    <div class="col">
+      <input
+        type="date"
+        class="form-control"
+        placeholder="Search by arrivalTime "
+        [(ngModel)]="searchArrivalDate"
+      />
+    </div>
+    <label for="exampleInputEmail1" class="form-label">Departure date</label>
+    <div class="col">
+      <input
+        type="date"
+        class="form-control"
+        placeholder="Search by departureTime"
+        [(ngModel)]="searchDepartureDate"
+      />
+    </div>
+    <div class="mt-2">
+      <button type="button" class="btn btn-success" (click)="switchButton()">
+        {{ sortButton }}<span class="m-2 material-icons"> sort </span>
+      </button>
+    </div>
+  </div>
+  <app-airlines-list
+    [bookingdatasList]="bookingdatasList"
+    [searchArrivalDate]="searchArrivalDate"
+    [searchDepartureDate]="searchDepartureDate"
+  ></app-airlines-list>
+</div>
